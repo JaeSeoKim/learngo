@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/JaeSeoKim/learngo/dict"
+)
 
 func main() {
-	fmt.Println("Hello World!")
+	dictionary := dict.Dictionary{"first": "first", "second": "second", "third": "third"}
+	dictionary.Delete("h")
+	fmt.Println(dictionary.Search("h"))
 }
